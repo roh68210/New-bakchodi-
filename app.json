@@ -1,0 +1,20 @@
+{
+    "name": "Text Leech Bot",
+    "description": "Download videos from text file links and upload to Telegram",
+    "logo": "https://graph.org/file/f12a07e9ed8dc349da2e7.jpg",
+    "keywords": ["telegram", "video", "leech", "pyrogram"],
+    "repository": "https://github.com/roh68210/Mtprs",
+    "stack": "heroku-22",
+    "env": {
+        "API_ID": {"description": "Your API ID from my.telegram.org", "required": true},
+        "API_HASH": {"description": "Your API Hash", "required": true},
+        "BOT_TOKEN": {"description": "Bot token from @BotFather", "required": true},
+        "OWNER_ID": {"description": "Your Telegram User ID", "required": true},
+        "SUDO_USERS": {"description": "Space separated sudo user IDs", "required": false},
+        "WEBHOOK": {"description": "Set to true for Render/Koyeb", "required": false, "value": "false"}
+    },
+    "buildpacks": [
+        {"url": "heroku/python"},
+        {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"}
+    ]
+}

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: text-leech-bot
+    plan: free
+    env: docker
+    dockerfilePath: ./Dockerfile
+    autoDeploy: false
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: SUDO_USERS
+        sync: false
+      - key: WEBHOOK
+        value: "true"
+      - key: PORT
+        value: "8080"

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.log
+*.mp4
+*.mkv
+*.webm
+*.jpg
+*.jpeg
+*.pdf
+downloads/
+thumb.jpg
+.env
